@@ -6,16 +6,14 @@ import android.support.v7.widget.SearchView;
 import android.support.v4.view.MenuItemCompat;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Spinner;
-import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
-import br.com.app.t_games.Jogo;
-import br.com.app.t_games.JogoGridAdapter;
+
+import br.com.app.t_games.Adapter.JogoGridAdapter;
+import br.com.app.t_games.Domain.Jogo;
 import br.com.app.t_games.R;
 
 
@@ -35,11 +33,11 @@ public class ProcurarJogosActivity extends AppCompatActivity implements SearchVi
         spinner = (Spinner)findViewById(R.id.spnJogos);
 
         mJogo = new ArrayList<Jogo>();
-        mJogo.add(new Jogo("Battle Field", "XBox", R.drawable.jogo));
-        mJogo.add(new Jogo("Gran Turismo", "XBox", R.drawable.jogo));
-        mJogo.add(new Jogo("Minecraft", "XBox", R.drawable.jogo));
-        mJogo.add(new Jogo("Guitar Hero", "XBox", R.drawable.jogo));
-        mJogo.add(new Jogo("Qualquer um", "XBox", R.drawable.jogo));
+        mJogo.add(new Jogo("Battle Field", "XBox", R.drawable.jogo, 4));
+        mJogo.add(new Jogo("Gran Turismo", "XBox", R.drawable.jogo, 3));
+        mJogo.add(new Jogo("Minecraft", "XBox", R.drawable.jogo, 2));
+        mJogo.add(new Jogo("Guitar Hero", "XBox", R.drawable.jogo, 1));
+        mJogo.add(new Jogo("Qualquer um", "XBox", R.drawable.jogo, 5));
 
         adapter = new JogoGridAdapter(this, mJogo);
         mGridView.setAdapter(adapter);
