@@ -2,11 +2,15 @@ package br.com.app.t_games.Activitys;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import br.com.app.t_games.Domain.Jogo;
 import br.com.app.t_games.Fragment.JogoDetalheFragment;
+import br.com.app.t_games.Fragment.JogoDialogFragment;
 import br.com.app.t_games.Fragment.JogoListFragment;
 import br.com.app.t_games.R;
 
@@ -33,5 +37,7 @@ public class JogoActivity extends AppCompatActivity  {
             ft.replace(R.id.detalhe, fragment, JogoDetalheFragment.TAG_DETALHE);
             ft.commit();
         }
+
     }
+
 }

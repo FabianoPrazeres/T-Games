@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import br.com.app.t_games.Domain.Jogo;
 import br.com.app.t_games.Fragment.JogoDetalheFragment;
+import br.com.app.t_games.Fragment.JogoDialogFragment;
 import br.com.app.t_games.Fragment.JogoListFragment;
 import br.com.app.t_games.R;
 
@@ -23,5 +25,9 @@ public class MeusJogosActivity extends AppCompatActivity implements JogoListFrag
         Intent it = new Intent(this, JogoActivity.class);
         it.putExtra(JogoActivity.EXTRA_JOGO, jogo);
         startActivity(it);
+    }
+    public void adicionarJogo(View v){
+        JogoDialogFragment jogoDialogFragment = JogoDialogFragment.newInstance(null);
+        jogoDialogFragment.abrir(getSupportFragmentManager());
     }
 }

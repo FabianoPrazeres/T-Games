@@ -44,8 +44,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activitys.MeusJogosActivity"
-            android:label="Meus Jogos"></activity>
-        <activity android:name=".Activitys.JogoActivity"></activity>
+            android:label="Meus Jogos"
+            android:parentActivityName=".MainActivity"></activity>
+
+        <activity android:name=".Activitys.JogoActivity"
+            android:parentActivityName=".Activitys.MeusJogosActivity">
+
+        </activity>
     </application>
 
 </manifest>
